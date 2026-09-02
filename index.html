@@ -127,15 +127,10 @@ p:last-child{margin-bottom:0}
 .passees summary{font-family:"IBM Plex Sans",sans-serif;font-size:.85rem;color:var(--encre-doux);cursor:pointer;padding:.5rem 0}
 
 .contact{background:var(--toile-clair)}
-.formulaire{display:grid;gap:1rem;max-width:30rem}
-.champ{display:grid;gap:.35rem}
-.champ label{font-family:"IBM Plex Sans",sans-serif;font-size:.8rem;letter-spacing:.04em;color:var(--encre-doux)}
-.champ input,.champ textarea{font:inherit;font-size:1rem;padding:.6rem .75rem;border:1px solid rgba(42,33,27,.3);background:#fff;color:var(--encre);border-radius:0}
-.champ textarea{min-height:7.5rem;resize:vertical}
-.champ input:focus,.champ textarea:focus{outline:2px solid var(--rouge);outline-offset:1px;border-color:var(--rouge)}
 .coord{list-style:none;margin:0;padding:0}
 .coord li{padding:.55rem 0;border-bottom:1px solid rgba(42,33,27,.16)}
 .coord a{color:var(--rouge)}
+.ressources__titre{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--encre-doux);margin-bottom:.5rem}
 
 .affiche{margin:0}
 .affiche img{width:100%}
@@ -174,7 +169,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
     <p class="ouverture__sous">Un trio rock progressif, une scénographie immersive, et les tableaux de Courbet qui se mettent à bouger. Environ une heure, en salle comme en musée.</p>
     <div class="actions">
       <a class="bouton bouton--plein" href="#contact">Programmer le spectacle</a>
-      <a class="bouton bouton--vide" href="dossier-gustave.pdf" download>Dossier de présentation (PDF)</a>
+      <a class="bouton bouton--vide" href="dossier-gustave.pdf" target="_blank" rel="noopener">Communiqué de presse (PDF)</a>
     </div>
   </div>
 </header>
@@ -305,34 +300,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
 <section class="section contact" id="contact">
   <div class="enveloppe duo">
-    <div>
+    <div class="mesure">
       <h2 class="section__titre">Programmer Gustave</h2>
-      <p class="mesure" style="margin-bottom:2rem">Salles, musées, médiathèques, festivals : écrivez-nous pour recevoir la fiche technique, les conditions financières et les disponibilités.</p>
-      <form class="formulaire" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="REMPLACER_PAR_VOTRE_CLE_WEB3FORMS">
-        <input type="hidden" name="subject" value="Demande via gustaveprojet.fr">
-        <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off">
-        <div class="champ">
-          <label for="nom">Nom et structure</label>
-          <input id="nom" name="nom" type="text" required autocomplete="organization">
-        </div>
-        <div class="champ">
-          <label for="email">Adresse e-mail</label>
-          <input id="email" name="email" type="email" required autocomplete="email">
-        </div>
-        <div class="champ">
-          <label for="message">Votre projet, vos dates envisagées</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <div><button class="bouton bouton--plein" type="submit">Envoyer la demande</button></div>
-      </form>
+      <p>Salles, musées, médiathèques, festivals : écrivez-nous pour connaître nos disponibilités et nos conditions.</p>
+      <p style="margin-top:2rem"><a class="bouton bouton--plein" href="mailto:gustaveprojet@gmail.com?subject=Programmation%20du%20spectacle%20Gustave">gustaveprojet@gmail.com</a></p>
     </div>
     <aside class="donnee">
+      <p class="ressources__titre">Ressources</p>
       <ul class="coord">
-        <li><a href="mailto:gustaveprojet@gmail.com">gustaveprojet@gmail.com</a></li>
+        <li><a href="dossier-gustave.pdf" target="_blank" rel="noopener">Communiqué de presse (PDF)</a></li>
+        <li><a href="Fiche_Tech_Gustave.pdf" target="_blank" rel="noopener">Fiche technique (PDF)</a></li>
         <li><a href="https://www.instagram.com/gustave.musique/">Instagram — @gustave.musique</a></li>
-        <li><a href="dossier-gustave.pdf" download>Dossier de présentation (PDF)</a></li>
-        <li><a href="fiche-technique-gustave.pdf" download>Fiche technique (PDF)</a></li>
       </ul>
     </aside>
   </div>

@@ -64,16 +64,17 @@ p:last-child{margin-bottom:0}
 
 .nav{position:sticky;top:0;z-index:20;background:rgba(226,211,190,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(42,33,27,.13)}
 .nav__in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:3.5rem}
-.nav__marque{font-size:1.15rem;text-decoration:none}
+.nav__marque{display:flex;align-items:center;text-decoration:none;padding:.4rem 0}
+.nav__marque img{height:1.6rem;width:auto}
 .nav__liens{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
 .nav__liens a{text-decoration:none;color:var(--encre-doux);padding:.25rem 0;border-bottom:1px solid transparent}
 .nav__liens a:hover,.nav__liens a:focus-visible{color:var(--rouge);border-bottom-color:var(--rouge)}
 @media(max-width:46rem){.nav__liens{display:none}}
 
 .ouverture{padding:clamp(2.5rem,7vw,5rem) 0 clamp(3rem,8vw,6rem)}
-.ouverture__toile{position:relative;margin-bottom:clamp(2rem,5vw,3.5rem);background:var(--nuit)}
+.ouverture__toile{position:relative;margin-bottom:clamp(2rem,5vw,3rem);background:var(--nuit)}
 .ouverture__toile video{width:100%;aspect-ratio:5/3;object-fit:cover}
-.ouverture__phrase{font-size:clamp(1.75rem,1.1rem + 3vw,3.25rem);max-width:22ch;margin-bottom:1.75rem;text-wrap:balance}
+.ouverture__phrase{font-size:clamp(1.75rem,1.1rem + 3vw,3.25rem);max-width:24ch;margin-bottom:clamp(1.75rem,4vw,2.5rem);text-wrap:balance}
 .ouverture__sous{max-width:44ch;color:var(--encre-doux);margin-bottom:2.25rem}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .bouton{display:inline-block;font-family:"IBM Plex Sans",sans-serif;font-size:.9rem;padding:.7rem 1.4rem;text-decoration:none;border:1px solid var(--rouge);transition:background-color .15s,color .15s}
@@ -148,7 +149,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
 <nav class="nav">
   <div class="enveloppe nav__in">
-    <a class="nav__marque" href="#haut">Gustave</a>
+    <a class="nav__marque" href="#haut">
+      <img src="assets/logo-gustave.png" width="608" height="210" alt="Gustave — retour en haut de page">
+    </a>
     <ul class="nav__liens donnee">
       <li><a href="#spectacle">Le spectacle</a></li>
       <li><a href="#salle">Écouter</a></li>
@@ -161,6 +164,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
 <header class="ouverture" id="haut">
   <div class="enveloppe">
+    <h1 class="ouverture__phrase">Vivre l'œuvre de Gustave Courbet comme un film animé.</h1>
     <div class="ouverture__toile">
       <video class="tableau" poster="assets/VIDEO2-poster.jpg" autoplay muted loop playsinline
              preload="metadata" disablepictureinpicture
@@ -168,7 +172,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
         <source src="assets/VIDEO2.mp4" type="video/mp4">
       </video>
     </div>
-    <h1 class="ouverture__phrase">Vivre l'œuvre de Gustave Courbet comme un film animé.</h1>
     <p class="ouverture__sous">Un trio rock progressif, une scénographie immersive, et les tableaux de Courbet qui se mettent à bouger. Environ une heure, en salle comme en musée.</p>
     <div class="actions">
       <a class="bouton bouton--plein" href="#contact">Programmer le spectacle</a>
@@ -183,7 +186,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
       <div><dt>Durée</dt><dd>Environ 1 h</dd></div>
       <div><dt>Formation</dt><dd>4 artistes</dd></div>
       <div><dt>Jauge</dt><dd>30 à 300 places</dd></div>
-      <div><dt>Lieux</dt><dd>Salle, musée, médiathèque</dd></div>
+      <div><dt>Lieux</dt><dd>Théâtre, salle de spectacle, musée, médiathèque</dd></div>
       <div><dt>Origine</dt><dd>Montpellier</dd></div>
     </dl>
 
